@@ -7,22 +7,18 @@ public class PaswordUtil {
     }
 
     public static LevelPassword levelSecurityPassword(String pass){
-        LevelPassword result = LevelPassword.WEAK;
+        LevelPassword result = LevelPassword.STRONG;
 
-        boolean hasLetter = false;
-        boolean hasDigit = false;
-
-        for (char c : pass.toCharArray()) {
-            if (Character.isLetter(c)) hasLetter = true;
-            if (Character.isDigit(c)) hasDigit = true;
+        if ( pass.length() < 8){
+            result = LevelPassword.WEAK;
         }
 
-        if (pass.length() > 8 && hasDigit && hasLetter && pass.length() <= 10 ){
+        if (pass.matches("[a-zA-Z]+") ){
+            result = LevelPassword.WEAK;
+        }
+
+        if (pass.matches("[0-9]+") && pass.matches("[a-zA-Z]+") && pass.length() >= 8) {
             result = LevelPassword.MEDIUM;
-        }
-
-        if (pass.length() > 10 && hasDigit && hasLetter){
-            result = LevelPassword.STRONG;
         }
 
         return result;
