@@ -22,7 +22,7 @@ public class PaswordUtilTest {
     }
 
     @Test
-    public void strongLevelWhenLettersAndNumbersAndMore10() {
-        Assert.assertEquals(STRONG, PaswordUtil.levelSecurityPassword("ppp66pppkjhn29"));
+    public void strongLevelWhenLettersNumbersAndSymbols() {
+        Assert.assertEquals(STRONG, PaswordUtil.levelSecurityPassword("pppMnn29!"));
     }
 }
