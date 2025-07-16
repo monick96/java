@@ -8,7 +8,7 @@ public class PaswordUtilTest {
 
     @Test
     public void weakLevelWhenLess8Char() {
-        Assert.assertEquals(WEAK, PaswordUtil.levelSecurityPassword("46546548"));
+        Assert.assertEquals(WEAK, PaswordUtil.levelSecurityPassword("4!8mj8"));
     }
 
     @Test
