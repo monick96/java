@@ -10,7 +10,7 @@ import org.mockito.Mockito;
 import static org.junit.Assert.*;
 
 public class PaymentProcessorTest {
-    
+
     PaymentGateway paymentGateway;
     PaymentProcessor paymentProcessor;
 

@@ -4,6 +4,9 @@ package utils;
 import org.junit.Assert;
 import org.junit.Test;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+
 public class StringUtilTest {
     @Test
     public void TestRepeatZeroTime() {
@@ -34,5 +37,36 @@ public class StringUtilTest {
 
     }
 
+    @Test
+    public void trueWhenTextEmpty(){
+
+        boolean result = StringUtil.isEmpty("");
+
+        assertTrue(result);
+    }
+
+    @Test
+    public void trueWhenTextNull(){
+
+        boolean result = StringUtil.isEmpty(null);
+
+        assertTrue(result);
+    }
+
+    @Test
+    public void trueWhenTextHaveOnlySpace(){
+
+        boolean result = StringUtil.isEmpty("       ");
+
+        assertTrue(result);
+    }
+
+    @Test
+    public void falseWhenTextHaveSpaceAndCharts(){
+
+        boolean result = StringUtil.isEmpty("       LOLA");
+
+        assertFalse(result);
+    }
 
 }
