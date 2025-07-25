@@ -1,12 +1,12 @@
-package models;
+package models.simulacionPagos;
 
 public class PaymentResponse {
 
-    enum PaymentStatus{
+    public enum PaymentStatus{
         OK, ERROR
     }
 
-    private PaymentStatus paymentStatus;
+   private PaymentStatus paymentStatus;
 
     public PaymentResponse(PaymentStatus paymentStatus){
         this.paymentStatus = paymentStatus;

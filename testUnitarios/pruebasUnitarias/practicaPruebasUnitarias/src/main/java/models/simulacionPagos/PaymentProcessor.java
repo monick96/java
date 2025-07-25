@@ -1,4 +1,4 @@
-package models;
+package models.simulacionPagos;
 
 public class PaymentProcessor {
 

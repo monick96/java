@@ -1,5 +1,7 @@
 package models;
 
+import models.juegoDados.Dice;
+import models.juegoDados.Player;
 import org.junit.Test;
 import org.mockito.Mockito;
 

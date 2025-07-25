@@ -1,5 +1,8 @@
 package models;
 
+import models.simulacionPagos.PaymentGateway;
+import models.simulacionPagos.PaymentProcessor;
+import models.simulacionPagos.PaymentResponse;
 import org.junit.Test;
 import org.mockito.Mockito;
 
@@ -38,7 +41,7 @@ public class PaymentProcessorTest {
 
         Mockito.when(paymentGateway.requestPayment(Mockito.any()))
                 .thenReturn(new PaymentResponse(PaymentResponse.PaymentStatus.ERROR));
-        
+
         boolean result = paymentProcessor.makePayment(1000);
 
         assertFalse(result);
